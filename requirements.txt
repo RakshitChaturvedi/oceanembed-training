@@ -1,0 +1,12 @@
+numpy
+dask
+zarr
+xesmf
+scipy
+tqdm
+copernicusmarine>=2.3
+pyyaml>=6.0
+xarray>=2024.1
+netCDF4>=1.6
+h5netcdf>=1.3
+pandas>=2.0

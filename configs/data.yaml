@@ -1,0 +1,56 @@
+domain:
+  lat_min: 5.0
+  lat_max: 30.0
+  lon_min: 45.0
+  lon_max: 105.0
+  resolution: 0.25
+
+dates:
+  start: "2020-01-01"
+  end: "2025-12-31"
+
+split:
+  train_fraction: 0.70
+  val_fraction: 0.15
+  test_fraction: 0.15
+
+raw_dir: "data/raw"
+processed_dir: "data/processed"
+artifact_dir: "artifacts"
+
+sources:
+  sst:
+    path: "data/raw/sst/*.nc"
+    variable: "sst"
+
+  sss:
+    path: "data/raw/sss/*.nc"
+    variable: "sss"
+
+  ssha:
+    path: "data/raw/ssha/*.nc"
+    variable: "sla"
+
+  wind_u:
+    path: "data/raw/wind/*.nc"
+    variable: "uwnd"
+
+  wind_v:
+    path: "data/raw/wind/*.nc"
+    variable: "vwnd"
+
+  current_u:
+    path: "data/raw/currents/*.nc"
+    variable: "uo"
+
+  current_v:
+    path: "data/raw/currents/*.nc"
+    variable: "vo"
+
+  glorys_temperature:
+    path: "data/raw/glorys/*.nc"
+    variable: "thetao"
+
+  glorys_salinity:
+    path: "data/raw/glorys/*.nc"
+    variable: "so"

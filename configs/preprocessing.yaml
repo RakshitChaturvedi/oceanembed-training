@@ -1,0 +1,57 @@
+phase2:
+  input_root: "data/raw"
+  output_root: "data/processed/phase2"
+
+  spatial:
+    lat_min: 5.0
+    lat_max: 30.0
+    lon_min: 45.0
+    lon_max: 105.0
+    resolution: 0.25
+
+  temporal:
+    start: "2021-01-01"
+    end: "2024-11-19"
+    frequency: "1D"
+
+  regrid:
+    method:
+      default: "bilinear"
+
+  datasets:
+
+    sst:
+      type: "daily_surface"
+      variable: "analysed_sst"
+
+    sss:
+      type: "coarse_surface"
+      variable: "sss"
+
+    ssh:
+      type: "daily_surface"
+      variable: "sla"
+
+    wind:
+      type: "subdaily_surface"
+      variables:
+        - "uwnd"
+        - "vwnd"
+
+    currents:
+      type: "daily_surface"
+      variables:
+        - "u"
+        - "v"
+
+    armor3d:
+      type: "daily_subsurface"
+      variables:
+        temperature: "to"
+        salinity: "so"
+
+    glorys:
+      type: "daily_subsurface"
+      variables:
+        temperature: "thetao"
+        salinity: "so"
